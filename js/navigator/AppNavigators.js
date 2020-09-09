@@ -21,6 +21,7 @@ import HomePage from '../page/HomePage';
 import WelcomePage from '../page/WelcomePage';
 import DetailPage from '../page/DetailPage';
 import FetchDemo from '../page/FetchDemo'
+import AsyncStorageDemoPage from '../page/AsyncStorageDemoPage'
 
 const InitNavigator = createStackNavigator(
   {
@@ -42,7 +43,8 @@ const MainNavigator = createStackNavigator(
       },
     },
     DetailPage,
-    FetchDemo
+    FetchDemo,
+    AsyncStorageDemoPage
   },
   {},
 );

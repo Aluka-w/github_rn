@@ -1,25 +1,32 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Button, View, StyleSheet, Text} from 'react-native';
 import {
   createBottomTabNavigator,
   createMaterialTopTabNavigator,
   createTabNavigator,
 } from 'react-navigation-tabs';
-import {createSwitchNavigator, createAppContainer} from 'react-navigation';
-import NavigationUtil from '../navigator/NavigationUtil'
-
+import {createAppContainer} from 'react-navigation';
+import NavigationUtil from '../navigator/NavigationUtil';
 const PopularTab = () => {
   return (
     <View style={styles.container}>
       <Text>PopularTab</Text>
-      <Button title="跳转到 DynamicTabNavigation 之外的路由"
+      <Button
+        title="跳转到 DynamicTabNavigation 之外的路由"
         onPress={() => {
-          NavigationUtil.goPage({}, 'DetailPage')
+          NavigationUtil.goPage({}, 'DetailPage');
         }}
       />
-      <Button title="跳转到 FetchDemo"
+      <Button
+        title="跳转到 FetchDemo"
         onPress={() => {
-          NavigationUtil.goPage({}, 'FetchDemo')
+          NavigationUtil.goPage({}, 'FetchDemo');
+        }}
+      />
+      <Button
+        title="跳转到 AsyncStorageDemoPage"
+        onPress={() => {
+          NavigationUtil.goPage({}, 'AsyncStorageDemoPage');
         }}
       />
     </View>
